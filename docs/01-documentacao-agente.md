@@ -81,7 +81,6 @@ flowchart TD
 - [x] ex: Não faz recomendações sem perfil do cliente
 
 ### Limitações Declaradas
-> O que o agente NÃO faz?
 
 - Não substitui um consultor financeiro profissional
 - Não acessa dados bancários sensíveis do usuário
