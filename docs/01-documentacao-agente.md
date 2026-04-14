@@ -50,11 +50,21 @@ Semi-formal, com linguagem clara e simples, evitando termos técnicos complexos.
 
 ```mermaid
 flowchart TD
-    A[Usuário] --> B[Interface Web]
-    B --> C[Backend]
-    C --> D[LLM - Modelo de Linguagem]
-    D --> E[Base de Conhecimento]
-    E --> D
-    D --> F[Validação]
-    F --> G[Resposta ao Usuário]
-    G --> B
+    A[Usuário] --> B[Interface visual]
+    B --> C[LLM - Modelo de Linguagem]
+    C --> D[Base de Conhecimento]
+    D --> C
+    C --> E[Validação]
+    E --> F[Resposta ao Usuário]
+    F --> B
+```
+### Componentes
+
+| Componente | Descrição |
+|------------|-----------|
+| Interface | [Chatbot em Streamlit] |
+| LLM | [Llama (local)] |
+| Base de Conhecimento | [ex: JSON/CSV mockados] |
+| Validação | [ex: Checagem de alucinações] |
+
+---
