@@ -64,21 +64,21 @@ flowchart TD
 |------------|-----------|
 | Interface | Chatbot em [Streamlit](https://streamlit.io/) |
 | LLM | [Llama (local)](https://www.llama.com/) |
-| Base de Conhecimento | [JSON/CSV mockados na pasta `data`] |
-| Validação | [ex: Checagem de alucinações] |
+| Base de Conhecimento | JSON/CSV mockados na pasta `data` |
+| Validação | Checagem de alucinações |
 
 ---
 ## Segurança e Anti-Alucinação
 
 ### Estratégias Adotadas
 
-- [x] [Agente responde com base nas informações fornecidas pelo usuário]
-- [x] [Quando não possui dados suficientes, solicita mais informações]
-- [x] [Evita recomendações financeiras definitivas, apresentando alternativas]
-- [x] [Explica limitações das sugestões (ex: custos de parcelamento)]
-- [x] [Não realiza promessas ou garantias financeiras]
-- [x] [ex: Quando não sabe, admite e redireciona]
-- [x] [ex: Não faz recomendações sem perfil do cliente]
+- [x] Agente responde com base nas informações fornecidas pelo usuário
+- [x] Quando não possui dados suficientes, solicita mais informações
+- [x] Evita recomendações financeiras definitivas, apresentando alternativas
+- [x] Explica limitações das sugestões (ex: custos de parcelamento)
+- [x] Não realiza promessas ou garantias financeiras
+- [x] Quando não sabe, admite e redireciona
+- [x] ex: Não faz recomendações sem perfil do cliente
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
