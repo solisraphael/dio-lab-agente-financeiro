@@ -2,17 +2,13 @@
 
 ## Dados Utilizados
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
-
-| Arquivo | Formato | Utilização no Agente |
+| Arquivo | Formato | Para que serve na SonIA |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `historico_atendimento.csv` | CSV | Fornecer dados para uma interação continuada, próxima e personalizada|
+| `perfil_investidor.json` | JSON | Personalizar as recomendações financeiras de acordo com as caracteristicas do perfil |
+| `produtos_financeiros.json` | JSON | Conhecer os produtos da instituição para recomendar as melhores soluções para a demanda atual|
+| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente para recomendações viaveis de compras  |
 
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
 
 ---
 
