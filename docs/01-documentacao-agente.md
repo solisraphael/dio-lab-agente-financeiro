@@ -3,9 +3,9 @@
 ## 📌 Caso de Uso
 
 ### Problema
-Muitos usuários sonham em adquirir bens de consumo, como eletrônicos, eletrodomésticos ou outros produtos, mas não possuem clareza sobre qual a melhor forma de realizar a compra sem comprometer sua saúde financeira, não estabelecem o objetivo e acabam abandonando o sonho ou postergando indefinidamente, gerando frustração.
+Muitos usuários sonham em adquirir bens de consumo, como eletrônicos, eletrodomésticos ou outros produtos, mas não possuem clareza sobre qual a melhor forma de realizar a compra ou estratégia, sem comprometer sua saúde financeira. Assim, não estabelecem o objetivo de compra e acabam abandonando o sonho ou postergando indefinidamente, gerando frustração.
 
-Frequentemente surgem dúvidas como: comprar agora ou esperar, pagar à vista ou parcelado, e qual o impacto dessa decisão no orçamento mensal. A falta de planejamento e a compra por impulso pode levar ao endividamento ou ao uso ineficiente dos recursos financeiros.
+Frequentemente surgem dúvidas como: comprar agora ou esperar, pagar à vista ou parcelado, quais outras formas de me capitalizar existem para me ajudar e qual o impacto dessa decisão no orçamento mensal. A falta de planejamento e a compra por impulso pode levar ao endividamento ou ao uso ineficiente dos recursos financeiros.
 
 ---
 
