@@ -13,8 +13,6 @@
 
 ## Estratégia de Integração
 
-## Estratégia de Integração
-
 ### Como os dados são carregados?
 Os arquivos CSV e JSON são carregados no início da sessão e convertidos em estruturas de dados em memória para acesso rápido.
 
