@@ -12,7 +12,7 @@ Frequentemente surgem dúvidas como: comprar agora ou esperar, pagar à vista ou
 ### Solução
 A SonIA atua como um assistente financeiro inteligente que ajuda o usuário a planejar a compra do bem que sonha, analisando sua situação atual e apresentando diferentes cenários de decisão.
 
-A partir de informações como produto, preço, quanto o usuário já possui e sua renda mensal, dívidas o agente:
+A partir de informações como produto, preço, quanto o usuário já possui, sua renda mensal, dívidas o agente:
 
 - Calcula o tempo necessário para adquirir o bem  
 - Compara opções de pagamento (à vista vs parcelado)  
