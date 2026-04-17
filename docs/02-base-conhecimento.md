@@ -19,9 +19,13 @@ Os arquivos CSV e JSON são carregados no início da sessão e convertidos em te
 Exemplo:
 
 ```python
-perfil = carregar_json("perfil_investidor.json")
-transacoes = carregar_csv("transacoes.csv")
-produtos = carregar_json("produtos_financeiros.json")
+import json
+import pandas as pd
+
+transacoes = pd.read_csv('./data/transacoes.csv')
+historico = pd.read_csv('/data/historico_atendimento.csv')
+perfil = json.load(open('./data/perfil_investidor.json'))
+produtos = json.load(open('./data/produtos_financeiros.json'))
 ```
 
 ### Como os dados são usados no prompt?
