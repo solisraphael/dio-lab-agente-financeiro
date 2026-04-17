@@ -1,4 +1,4 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🤖 SonIA — Assistente de Planejamento de Compras de Bens
 
 ## Contexto
 
