@@ -60,11 +60,13 @@ Documente os prompts que definem o comportamento do seu agente:
 
 ### 4. Aplicação Funcional
 
-Desenvolva um **protótipo funcional** do seu agente:
+Foi desenvolvido um **protótipo funcional da agente SonIA**, capaz de interagir com o usuário e fornecer recomendações financeiras personalizadas.
 
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
+A aplicação consiste em:
+- Chatbot interativo para simulação de conversas com o cliente
+- Integração com modelo de linguagem (LLM) executado localmente (LLaMA)
+- Utilização de uma base de conhecimento composta por dados de perfil, transações e produtos financeiros
+- Geração de respostas estruturadas com análise, recomendação e plano de ação detalhado
 
 📁 **Pasta:** [`src/`](./src/)
 
@@ -72,27 +74,29 @@ Desenvolva um **protótipo funcional** do seu agente:
 
 ### 5. Avaliação e Métricas
 
-Descreva como você avalia a qualidade do seu agente:
+A qualidade da SonIA foi avaliada com base em testes estruturados e análise do comportamento do agente frente a diferentes cenários financeiros.
 
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
+**Métricas utilizadas:**
+- **Assertividade:** capacidade de responder corretamente com base nos dados fornecidos
+- **Segurança:** evitar invenção de informações ou recomendações indevidas
+- **Coerência:** alinhamento das respostas com o perfil financeiro do cliente
+- **Qualidade do plano de ação:** geração de estratégias práticas com valores e prazos definidos
 
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
+📄 **Detalhes completos:** [`docs/04-metricas.md`](./docs/04-metricas.md)
 
 ---
 
 ### 6. Pitch
 
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
+Foi desenvolvido um pitch apresentando a proposta da SonIA como uma solução para auxiliar usuários na tomada de decisões financeiras conscientes.
 
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
+O pitch aborda:
+- O problema do endividamento e falta de planejamento financeiro
+- A solução proposta pela SonIA com recomendações personalizadas
+- Demonstração prática do agente em funcionamento
+- Diferenciais como geração de planos de ação detalhados
 
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
+📄 **Pitch completo:** [`docs/05-pitch.md`](./docs/05-pitch.md)
 ---
 
 ## Ferramentas Sugeridas
