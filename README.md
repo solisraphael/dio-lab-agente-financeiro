@@ -2,60 +2,64 @@
 
 ## Contexto
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+A tomada de decisão financeira ainda é um desafio para grande parte das pessoas, especialmente quando envolve a aquisição de bens de consumo. Muitas decisões são feitas sem análise adequada da renda, dos gastos e da real capacidade financeira, resultando em endividamento e falta de planejamento.
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+A SonIA surge como uma **agente financeira inteligente**, utilizando IA Generativa para transformar dados financeiros em orientações práticas e personalizadas, sendo capaz de:
+
+- **Antecipar necessidades**, sugerindo estratégias antes mesmo da decisão de compra
+- **Personalizar recomendações** com base no perfil, renda e histórico de gastos do cliente
+- **Cocriar soluções financeiras**, como planos de poupança, parcelamento e estratégias híbridas
+- **Garantir segurança**, evitando respostas genéricas ou informações não baseadas nos dados fornecidos
 
 > [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+> Este projeto utiliza dados simulados para representar um cliente fictício e demonstrar o funcionamento de um agente financeiro em um cenário real.
 
 ---
 
-## O Que Você Deve Entregar
-
 ### 1. Documentação do Agente
 
-Defina **o que** seu agente faz e **como** ele funciona:
+A SonIA foi projetada para atuar como uma consultora financeira digital focada em auxiliar clientes a realizar o sonho da aquisição de bens de consumo de forma consciente e controlada.
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
+- **Caso de Uso:** Planejamento financeiro para compra de bens (ex: celulares, TVs, carros), com geração de planos de ação personalizados
+- **Persona e Tom de Voz:** Consultora financeira clara, objetiva e didática, com linguagem acessível para usuários leigos
+- **Arquitetura:** Sistema baseado em carregamento de dados (perfil, transações e produtos), construção de contexto e envio para modelo LLaMA para geração de resposta
+- **Segurança:** Uso exclusivo dos dados fornecidos, regras no system prompt para evitar alucinação e respostas fora do contexto
 
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+📄 **Detalhes completos:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
 
 ---
 
 ### 2. Base de Conhecimento
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
+A base de conhecimento da SonIA é composta por dados simulados que representam a realidade financeira de um cliente.
 
 | Arquivo | Formato | Descrição |
 |---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
+| `transacoes.csv` | CSV | Histórico de entradas e saídas financeiras do cliente |
+| `historico_atendimento.csv` | CSV | Registro de interações anteriores com o agente |
+| `perfil_investidor.json` | JSON | Dados pessoais, renda, perfil financeiro e metas |
+| `produtos_financeiros.json` | JSON | Lista de produtos financeiros disponíveis com rentabilidade |
 
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
+Esses dados são utilizados diretamente no prompt, permitindo que o modelo gere respostas personalizadas e contextualizadas.
 
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
+📄 **Detalhes completos:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
 
 ---
 
 ### 3. Prompts do Agente
 
-Documente os prompts que definem o comportamento do seu agente:
+Os prompts são responsáveis por definir o comportamento da SonIA e garantir respostas consistentes e úteis.
 
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
+- **System Prompt:** Define regras, comportamento e formato das respostas
+- **Exemplos de Interação:** Cenários reais com perguntas e respostas esperadas, incluindo planos de ação com valores e prazos
+- **Tratamento de Edge Cases:** Situações como falta de dados ou perguntas fora do escopo são tratadas com respostas seguras e orientativas
 
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+A SonIA utiliza prompts estruturados para garantir:
+- uso correto dos dados
+- respostas seguras
+- recomendações práticas e acionáveis
 
+📄 **Detalhes completos:** [`docs/03-prompts.md`](./docs/03-prompts.md)
 ---
 
 ### 4. Aplicação Funcional
@@ -144,10 +148,4 @@ Todas as ferramentas abaixo possuem versões gratuitas:
 
 ---
 
-## Dicas Finais
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
