@@ -14,77 +14,78 @@
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
-Os arquivos CSV e JSON são carregados no início da sessão e convertidos em estruturas de dados em memória para acesso rápido.
+Os arquivos CSV e JSON são carregados no início da sessão e convertidos em texto estruturado para serem utilizados diretamente no prompt do modelo.
 
 Exemplo:
 
 ```python
-import json
-import csv
-
-def carregar_csv(caminho):
-    with open(caminho, 'r') as f:
-        return list(csv.DictReader(f))
-
-def carregar_json(caminho):
-    with open(caminho, 'r') as f:
-        return json.load(f)
-
-transacoes = carregar_csv("transacoes.csv")
-historico = carregar_csv("historico_atendimento.csv")
 perfil = carregar_json("perfil_investidor.json")
+transacoes = carregar_csv("transacoes.csv")
 produtos = carregar_json("produtos_financeiros.json")
 ```
 
 ### Como os dados são usados no prompt?
-Os dados não são inseridos integralmente no prompt. Eles são filtrados e organizados conforme a necessidade da interação, sendo injetados dinamicamente como contexto.
+Todos os dados do cliente e produtos são incluídos diretamente no prompt como contexto fixo, permitindo que o modelo tenha acesso completo às informações durante a geração da resposta.
 
 Exemplo:
 
 ```python
-def montar_contexto(perfil, transacoes):
-    renda = perfil["renda"]
-    gastos = sum(float(t["valor"]) for t in transacoes if t["tipo"] == "saida")
-
-    return f"""
-[PERFIL]
-Renda: {renda}
-Perfil: {perfil["perfil"]}
-
-[FINANÇAS]
-Gastos mensais: {gastos}
-Saldo estimado: {renda - gastos}
-"""
-
-def montar_prompt(pergunta, contexto):
+def montar_prompt(pergunta, perfil, transacoes, produtos):
     return f"""
 Você é a SonIA, uma especialista em planejamento financeiro.
 
-{contexto}
+[DADOS DO CLIENTE]
+Nome: {perfil["nome"]}
+Idade: {perfil["idade"]}
+Renda: {perfil["renda"]}
+Perfil: {perfil["perfil"]}
+Metas: {perfil["metas"]}
+
+[TRANSAÇÕES]
+{transacoes}
+
+[PRODUTOS FINANCEIROS]
+{produtos}
 
 Pergunta do cliente:
 {pergunta}
 """
 
-contexto = montar_contexto(perfil, transacoes)
-prompt = montar_prompt("Posso comprar um celular de 2000?", contexto)
-
-resposta = modelo.generate(prompt)
+prompt = montar_prompt(
+    "Posso comprar um celular de 2000?",
+    perfil,
+    transacoes,
+    produtos
+)
 ```
 ---
 
 ## Exemplo de Contexto Montado
 
-> Mostre um exemplo de como os dados são formatados para o agente.
+Abaixo está um exemplo de como os dados são formatados e enviados ao agente:
 
 ```
-Dados do Cliente:
-- Nome: João Silva
-- Perfil: Moderado
-- Saldo disponível: R$ 5.000
+Você é a SonIA, uma especialista em planejamento financeiro.
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
+[DADOS DO CLIENTE]
+Nome: João Silva
+Idade: 35
+Renda: 3000
+Perfil: moderado
+Metas: comprar um carro
+
+[TRANSAÇÕES]
+01/11 - Supermercado - Alimentação - 450 - saída
+03/11 - Streaming - Entretenimento - 55 - saída
+05/11 - Salário - Renda - 3000 - entrada
+10/11 - Energia - Contas - 200 - saída
+
+[PRODUTOS FINANCEIROS]
+
+Poupança: rentabilidade 0.5% ao mês
+CDB: rentabilidade 0.8% ao mês
+Crédito pessoal: juros 2% ao mês
+
+Pergunta do cliente:
+Posso comprar um celular de 2000?
 ```
