@@ -61,5 +61,3 @@ O impacto é direto: mais controle financeiro, menos endividamento e decisões m
 ## Link do Vídeo
 
 (https://drive.google.com/file/d/1A2bC3dEfGhIjK4LmN5OpQrStUvWxYz/view?usp=sharing)
-
-[Link do vídeo]
