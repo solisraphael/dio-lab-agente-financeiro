@@ -102,6 +102,7 @@ O pitch aborda:
 - Diferenciais como geração de planos de ação detalhados
 
 📄 **Pitch completo:** [`docs/05-pitch.md`](./docs/05-pitch.md)
+
 ---
 
 ## Ferramentas Sugeridas
