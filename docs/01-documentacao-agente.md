@@ -63,7 +63,7 @@ flowchart TD
 | Componente | Descrição |
 |------------|-----------|
 | Interface | Chatbot em [Streamlit](https://streamlit.io/) |
-| LLM | [Llama (local)](https://www.llama.com/) |
+| LLM | [Ollama (local)]([https://www.ollama.com/](https://ollama.com/)) |
 | Base de Conhecimento | JSON/CSV mockados na pasta `data` |
 | Validação | Checagem de alucinações |
 
