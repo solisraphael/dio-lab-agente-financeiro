@@ -1,6 +1,5 @@
 # Avaliação e Métricas
 
-## Como Avaliar seu Agente
 
 A avaliação foi realizada utilizando duas abordagens complementares:
 
