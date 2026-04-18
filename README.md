@@ -60,6 +60,7 @@ A SonIA utiliza prompts estruturados para garantir:
 - recomendações práticas e acionáveis
 
 📄 **Detalhes completos:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+
 ---
 
 ### 4. Aplicação Funcional
